@@ -11,4 +11,4 @@ This application scrapes the internet (stack overflow) looking for snippets of p
 
 [Email](mailto:mybutt)
 
-(Kidding about the security. This application was built as a demo of different container namespace isolation guarantees).
+(Kidding about the security. This application was built as a demo of different container namespace isolation guarantees. But please don't actually run this).
