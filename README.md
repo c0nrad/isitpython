@@ -10,3 +10,5 @@ This application scrapes the internet (stack overflow) looking for snippets of p
 ### Questions?
 
 [Email](mailto:mybutt)
+
+(Kidding about the security. This application was built as a demo of different container namespace isolation guarantees).
