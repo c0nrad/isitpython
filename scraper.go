@@ -32,12 +32,12 @@ func Scrape(url string) ([]string, []Snippet, error) {
 		return nil, nil, err
 	}
 
-	links := GetLinks(document)
-	snippets := GetSnippets(document)
-	return links, snippets, nil	
+	links := ScrapeLinks(document)
+	snippets := ScrapeSnippets(document)
+	return links, snippets, nil
 }
 
-func GetLinks(d *goquery.Document) []string {
+func ScrapeLinks(d *goquery.Document) []string {
 
 	links := []string{}
 	aTags := d.Find("a")
@@ -55,7 +55,7 @@ func GetLinks(d *goquery.Document) []string {
 	return links
 }
 
-func GetSnippets(d *goquery.Document) []Snippet {
+func ScrapeSnippets(d *goquery.Document) []Snippet {
 	snippets := []Snippet{}
 
 	codeTags := d.Find("code")

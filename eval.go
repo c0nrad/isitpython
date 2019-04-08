@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"io/ioutil"
 	"log"
 	"os"
@@ -27,6 +28,8 @@ func EvalSnippet(s *Snippet) error {
 	log.Println("Executing this python", s.Body)
 	cmd := exec.Command("python", tmpfile.Name())
 	out, err := cmd.CombinedOutput()
+
+	fmt.Println("this is the output", string(out))
 
 	s.Output = string(out)
 	s.Error = err
